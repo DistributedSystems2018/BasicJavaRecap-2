@@ -18,8 +18,11 @@ public class CoordinatePair {
 		return y;
 	}
 
-	public int getDistance(CoordinatePair otherCoord) {
-		return Math.abs(this.getX() - otherCoord.getX()) + Math.abs(this.getY() - otherCoord.getY());
+	public double getDistance(CoordinatePair otherCoord) {
+		int x = Math.abs(this.getX() - otherCoord.getX());
+		int y = Math.abs(this.getY() - otherCoord.getY());
+	        return Math.sqrt((x*x)+(y*y));
+	        	
 	}
 
 }

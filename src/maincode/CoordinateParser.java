@@ -28,7 +28,7 @@ public class CoordinateParser {
 	}
 
 	public void findFurthestAway() {
-		int maxDist = 0;
+		double maxDist = 0;
 		CoordinatePair origin = new CoordinatePair(0, 0);
 		CoordinatePair furthestAway = new CoordinatePair(0, 0);
 		for (CoordinatePair cp : coordinates) {
@@ -50,7 +50,7 @@ public class CoordinateParser {
 		CoordinatePair origin = coordinates.get(0);
 		CoordinatePair firstPoint = coordinates.get(1);
 		CoordinatePair closestPair = firstPoint;
-		int minDist = origin.getDistance(firstPoint);
+		double minDist = origin.getDistance(firstPoint);
 		for (int i = 2; i < coordinates.size(); i++) {
 			if (origin.getDistance(coordinates.get(i)) < minDist) {
 				minDist = origin.getDistance(coordinates.get(i));
